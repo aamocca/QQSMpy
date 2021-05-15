@@ -11,7 +11,7 @@ from threading import Timer
 #Declarar la pantalla
 
 wn=turtle.Screen()
-wn.setup(1800,700)
+wn.setup(1000,600)
 wn.colormode(255)
 wn.bgcolor(0,0,10)
 wn.title("Quien quiere ser millonario")
@@ -282,9 +282,12 @@ def phonecall():
     clearimg()
     score1.write("{}".format(correctNow),font=("Verdana",62,"bold"))
     scoreimg()
-    CurrentQ = randrange(2,15)
+    CurrentQ = randrange(2,68)
     clearBoard()
     GetQuestionNum()
+    if correctNow ==15:
+        win()
+    
     
 
 def cincuenta():
@@ -406,6 +409,12 @@ def scoreimg():
        tr41.shape('Picture15.gif')
        tr41.goto(700,0)              
 
+def win():
+     if correctNow == 15:
+           quest.clear()
+           quest.write("Felicidades has ganado!",font=("Verdana",23,"bold"))
+           time.sleep(1.2)
+           turtle.bye()
                                
 
 def evaluate():
@@ -2262,8 +2271,8 @@ def question64():
 def question65(): 
     global tr6
     global questask
-    quest.write("Encuentra el valor de ambas x",font=("Verdana",23,"bold"))
-    questask=("Encuentra el valor de ambas a1")
+    quest.write("Encuentra el valor de  x",font=("Verdana",23,"bold"))
+    questask=("Encuentra el valor de ambas x")
     A.write("a.  8.443615",font=("Verdana",23,"bold"))
     B.write("b.  1.26756",font=("Verdana",23,"bold"))
     C.write("c.  1.312138",font=("Verdana",23,"bold"))
@@ -2288,8 +2297,8 @@ def question65():
 def question66(): 
     global tr6
     global questask
-    quest.write("Encuentra el valor de ambas x",font=("Verdana",23,"bold"))
-    questask=("Encuentra el valor de ambas a1")
+    quest.write("Encuentra el valor de x",font=("Verdana",23,"bold"))
+    questask=("Encuentra el valor de x")
     A.write("a.  4.43615",font=("Verdana",23,"bold"))
     B.write("b.  106.7777",font=("Verdana",23,"bold"))
     C.write("c.  3.12138",font=("Verdana",23,"bold"))
@@ -2314,8 +2323,8 @@ def question66():
 def question67(): 
     global tr6
     global questask
-    quest.write("Encuentra el valor de ambas x",font=("Verdana",23,"bold"))
-    questask=("Encuentra el valor de ambas a1")
+    quest.write("Encuentra el valor de  x",font=("Verdana",23,"bold"))
+    questask=("Encuentra el valor de x")
     A.write("a.  .22086",font=("Verdana",23,"bold"))
     B.write("b.  10.77",font=("Verdana",23,"bold"))
     C.write("c.  32.138",font=("Verdana",23,"bold"))
@@ -2340,8 +2349,8 @@ def question67():
 def question68(): 
     global tr6
     global questask
-    quest.write("Encuentra el valor de ambas x",font=("Verdana",23,"bold"))
-    questask=("Encuentra el valor de ambas a1")
+    quest.write("Encuentra el valor de x",font=("Verdana",23,"bold"))
+    questask=("Encuentra el valor de x")
     A.write("a.  206",font=("Verdana",23,"bold"))
     B.write("b.  10",font=("Verdana",23,"bold"))
     C.write("c.  3",font=("Verdana",23,"bold"))
